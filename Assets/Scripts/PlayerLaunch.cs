@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerLaunch : MonoBehaviour {
 
+    public GameObject burpEffect;
     Rigidbody2D rb;
     bool jumped = false;
     bool fall = false;
@@ -41,6 +42,7 @@ public class PlayerLaunch : MonoBehaviour {
         {
             power = 1.0f;
         }
+        Instantiate(burpEffect,transform.position, Quaternion.identity);
         rb.AddForce(new Vector2(power * JumpInfoX, power * JumpInfoY));
         rb.AddTorque(turnAmmount);
         jumped = true;
