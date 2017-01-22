@@ -10,6 +10,7 @@ public class BarMovement : MonoBehaviour
     public float lowestPos, highestPos, speed, deltaLerp, dir, startTime;
     public Animator animator;
     public float speedOfBar;
+    public PlayerLaunch pLaunch;
     Vector2 to, from;
     Vector2 startPos;
     public int AmountOfPresses;
@@ -29,6 +30,7 @@ public class BarMovement : MonoBehaviour
         lowestPos = backBar.anchoredPosition.y - backBar.rect.height / 1.5f;
         to = new Vector2(backBar.anchoredPosition.x, lowestPos);
         from = new Vector2(backBar.anchoredPosition.x, highestPos);
+        pLaunch = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLaunch>();
         StartCoroutine(speedUpBar());
     }
 
@@ -63,8 +65,7 @@ public class BarMovement : MonoBehaviour
                 if(presses >= AmountOfPresses)
                 {
                     animator.SetTrigger("Explode");
-                    SceneManager.LoadScene(1);
-
+                    pLaunch.exploded = true;
                 }
                 dir *= -1;
             }

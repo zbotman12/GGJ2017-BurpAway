@@ -8,6 +8,7 @@ public class PlayerLaunch : MonoBehaviour {
     public GameObject burpEffect;
     Rigidbody2D rb;
     bool jumped = false;
+    public bool exploded = false;
     bool fall = false;
     public float turnAmmount;
     //new Vector3(Ycomp, Xcomp, hangTime)
@@ -41,6 +42,8 @@ public class PlayerLaunch : MonoBehaviour {
         {
             power = 1.0f;
         }
+        if (exploded) 
+        { SceneManager.LoadScene(1); return; }
         Instantiate(burpEffect,transform.position, Quaternion.identity);
         rb.AddForce(new Vector2(power * JumpInfoX, power * JumpInfoY));
         rb.AddTorque(turnAmmount);
