@@ -12,7 +12,7 @@ public class ParallaxController : MonoBehaviour {
     public float lookAheadFactor = 3;
     public float lookAheadReturnSpeed = 0.5f;
     public float lookAheadMoveThreshold = 0.1f;
-
+    public float offsetX, offsetY;
     private float m_OffsetZ;
     private Vector3 m_LastTargetPosition;
     private Vector3 m_CurrentVelocity;
@@ -51,7 +51,7 @@ public class ParallaxController : MonoBehaviour {
         {
             parallaxAmount = parallaxValue / 1000 * m_CurrentVelocity.x;
         }
-        transform.position = newPos;
+        transform.position = newPos + new Vector3(offsetX, offsetY, 0);
 
         m_LastTargetPosition = target.position;
     }

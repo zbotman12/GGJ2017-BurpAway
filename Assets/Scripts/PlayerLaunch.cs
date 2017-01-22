@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerLaunch : MonoBehaviour {
@@ -22,21 +23,30 @@ public class PlayerLaunch : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Input.GetButtonDown("Jump"))
-        {
-            rb.AddForce (new Vector2(power * JumpInfoX, power * JumpInfoY));
-            rb.AddTorque(turnAmmount);
-            StartCoroutine(JumpTime());
-        }
 
         if (jumped && rb.velocity.y <= 0)
         {
-            rb.gravityScale = 0;
+            rb.gravityScale = 0.3f;
         }
 
         if(fall)
         {
             rb.gravityScale = 3;
+        }
+    }
+
+    public void Launch(float power)
+    {
+        rb.AddForce(new Vector2(power * JumpInfoX, power * JumpInfoY));
+        rb.AddTorque(turnAmmount);
+        StartCoroutine(JumpTime());
+    }
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.tag == "deathzone")
+        {
+            Debug.Log("changeScene~!!!!");
         }
     }
 
