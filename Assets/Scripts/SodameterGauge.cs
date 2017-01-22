@@ -8,7 +8,7 @@ public class SodameterGauge : MonoBehaviour
     public UnityEngine.UI.Image sodameter;
     public float fillAmt;
     public PlayerLaunch pLaunch;
-    public float fillValue;
+    public float fillValue = 0;
 
     // Use this for initialization
     void Start ()
@@ -17,18 +17,21 @@ public class SodameterGauge : MonoBehaviour
         fillAmt = 0.0f;
         fillValue = 0.05f;
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-        fillValue += fillAmt;
-        pLaunch.power = fillValue;
-        sodameter.fillAmount = fillValue;
+        if (fillValue < 1)
+        {
+            fillValue += fillAmt;
+            pLaunch.power = fillValue;
+            sodameter.fillAmount = fillValue;
+        }
     }
 
     public void fill()
     {
-        fillAmt = 0.005f;
+        fillAmt = 0.002f;
     }
 
     public void stopFill()
