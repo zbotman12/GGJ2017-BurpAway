@@ -13,8 +13,8 @@ public class PlayerLaunch : MonoBehaviour {
     public int JumpInfoX;
     public int JumpInfoY;
     public float hangTime;
-    [Range(0, 1)]
-    public float power;
+    public UnityEngine.UI.Image sodameter;
+    float power;
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -37,6 +37,7 @@ public class PlayerLaunch : MonoBehaviour {
 
     public void Launch(float power)
     {
+        power = sodameter.fillAmount;
         rb.AddForce(new Vector2(power * JumpInfoX, power * JumpInfoY));
         rb.AddTorque(turnAmmount);
         StartCoroutine(JumpTime());

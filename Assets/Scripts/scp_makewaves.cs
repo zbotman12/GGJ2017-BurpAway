@@ -15,14 +15,14 @@ public class scp_makewaves : MonoBehaviour {
     public float yspacing;
     void Start () {
         {
-            for (i = 0; i <2000; i++) //make waves
+            for (i = 0; i <1000; i++) //make waves
             {
-                Instantiate(wave_right1, new Vector3((i * xspacing), 0.4f, 0), Quaternion.identity);
-                Instantiate(wave_left1, new Vector3((i * xspacing), -2.5f, 0), Quaternion.identity);
-                Instantiate(wave_right2, new Vector3((i * xspacing), -5.5f, 0), Quaternion.identity);
-                Instantiate(wave_left2, new Vector3((i * xspacing), -8.5f, 0), Quaternion.identity);
-                Instantiate(wave_right3, new Vector3((i * xspacing), -11.5f, 0), Quaternion.identity);
-                Instantiate(collisionBox, new Vector3((i * xspacing), -5.5f, 0), Quaternion.identity);
+                Instantiate(wave_right1, new Vector3((i * xspacing), 0.4f, 0), Quaternion.identity, transform);
+                Instantiate(wave_left1, new Vector3((i * xspacing), -2.5f, 0), Quaternion.identity, transform);
+                Instantiate(wave_right2, new Vector3((i * xspacing), -5.5f, 0), Quaternion.identity, transform);
+                Instantiate(wave_left2, new Vector3((i * xspacing), -8.5f, 0), Quaternion.identity, transform);
+                Instantiate(wave_right3, new Vector3((i * xspacing), -11.5f, 0), Quaternion.identity, transform);
+                Instantiate(collisionBox, new Vector3((i * xspacing), -5.5f, 0), Quaternion.identity, transform);
 
 
 

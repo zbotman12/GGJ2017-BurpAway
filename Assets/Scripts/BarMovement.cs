@@ -14,12 +14,6 @@ public class BarMovement : MonoBehaviour
 	void Awake ()
     {
         trans = GetComponent<RectTransform>();
-        highestPos = backBar.anchoredPosition.y + backBar.rect.height / 1.5f;
-        lowestPos = backBar.anchoredPosition.y - backBar.rect.height / 1.5f;
-        to = new Vector2(backBar.anchoredPosition.x, lowestPos);
-        from = new Vector2(backBar.anchoredPosition.x, highestPos);
-        deltaLerp = 0;
-        dir = 1;
     }
 
     // Update is called once per frame
@@ -31,6 +25,12 @@ public class BarMovement : MonoBehaviour
             //startTime = Time.time;
             StartCoroutine(getRidOfStuff());
             started = true;
+            highestPos = backBar.anchoredPosition.y + backBar.rect.height / 1.5f;
+            lowestPos = backBar.anchoredPosition.y - backBar.rect.height / 1.5f;
+            to = new Vector2(backBar.anchoredPosition.x, lowestPos);
+            from = new Vector2(backBar.anchoredPosition.x, highestPos);
+            deltaLerp = 0;
+            dir = 1;
         }
         if (started)
         {

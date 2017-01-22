@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour {
 
+    public Animator animator;
     AudioSource ASa;
     AudioSource ASb;
     AudioSource ASc;
@@ -53,6 +54,7 @@ public class AudioController : MonoBehaviour {
     {
         if (Input.GetButtonDown("Jump") && !started)
         {
+            animator.SetTrigger("Burp");
             StartCoroutine(switchTrack(0));
             StartCoroutine(BlastOff());
             started = true;

@@ -1,0 +1,510 @@
+fileFormatVersion: 2
+guid: 396fa74cd9ced1a4fadd32cc3c282e12
+timeCreated: 1485065558
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: keyFrames_0
+    21300002: keyFrames_1
+    21300004: keyFrames_2
+    21300006: keyFrames_3
+    21300008: keyFrames_4
+    21300010: keyFrames_5
+    21300012: keyFrames_6
+    21300014: keyFrames_7
+    21300016: keyFrames_8
+    21300018: keyFrames_9
+    21300020: keyFrames_10
+    21300022: keyFrames_11
+    21300024: keyFrames_12
+    21300026: keyFrames_13
+    21300028: keyFrames_16
+    21300030: keyFrames_14
+    21300032: keyFrames_15
+    21300034: keyFrames_17
+    21300036: keyFrames_18
+    21300038: keyFrames_19
+    21300040: keyFrames_20
+    21300042: keyFrames_21
+    21300044: keyFrames_22
+    21300046: keyFrames_23
+    21300048: keyFrames_24
+    21300050: keyFrames_25
+    21300052: keyFrames_26
+    21300054: keyFrames_27
+    21300056: keyFrames_28
+    21300058: keyFrames_29
+    21300060: keyFrames_30
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: keyFrames_0
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2147
+        width: 175
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 2149
+        width: 175
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_2
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 2158
+        width: 175
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_3
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 2163
+        width: 175
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_4
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 2164
+        width: 175
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_5
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 2166
+        width: 175
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_6
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1761
+        width: 210
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1755
+        width: 210
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_8
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1760
+        width: 210
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_9
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 1757
+        width: 210
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_10
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1878
+        width: 210
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_11
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 1827
+        width: 249
+        height: 362
+      alignment: 9
+      pivot: {x: 0.5931568, y: 0.57640016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_12
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 1140
+        width: 340
+        height: 490
+      alignment: 9
+      pivot: {x: 0.6770436, y: 0.5348371}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_13
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 1732
+        width: 530
+        height: 490
+      alignment: 9
+      pivot: {x: 0.5551329, y: 0.6157588}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_16
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1430
+        width: 205
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_14
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1430
+        width: 205
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_15
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1430
+        width: 205
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_17
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 1430
+        width: 205
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_18
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1430
+        width: 205
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_19
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 1300
+        width: 190
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_20
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 1300
+        width: 190
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_21
+      rect:
+        serializedVersion: 2
+        x: 1846
+        y: 1300
+        width: 190
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_22
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 803
+        width: 214
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 1}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_23
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 802
+        width: 214
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_24
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 500
+        width: 349
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_25
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 500
+        width: 349
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_26
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 100
+        width: 185
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_27
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 100
+        width: 185
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_28
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 100
+        width: 185
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_29
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 100
+        width: 185
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: keyFrames_30
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 102
+        width: 185
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
