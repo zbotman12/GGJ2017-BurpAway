@@ -63,7 +63,7 @@ public class BarMovement : MonoBehaviour
                 if(presses >= AmountOfPresses)
                 {
                     animator.SetTrigger("Explode");
-                    SceneManager.LoadScene(2);
+                    SceneManager.LoadScene(1);
 
                 }
                 dir *= -1;
