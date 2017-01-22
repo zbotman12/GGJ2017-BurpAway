@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class BarMovement : MonoBehaviour
 {
+    [HideInInspector]
     public float lowestPos, highestPos, speed, deltaLerp, dir, startTime;
+    public float speedOfBar;
     Vector2 to, from;
+    Vector2 startPos;
     RectTransform trans;
     public RectTransform goalBar, backBar;
     public SodameterGauge sodameter;
@@ -14,6 +17,18 @@ public class BarMovement : MonoBehaviour
 	void Awake ()
     {
         trans = GetComponent<RectTransform>();
+        startPos = trans.anchoredPosition;
+        highestPos = backBar.anchoredPosition.y + backBar.rect.height / 1.5f;
+        lowestPos = backBar.anchoredPosition.y - backBar.rect.height / 1.5f;
+        to = new Vector2(backBar.anchoredPosition.x, lowestPos);
+        from = new Vector2(backBar.anchoredPosition.x, highestPos);
+        StartCoroutine(speedUpBar());
+    }
+
+    IEnumerator speedUpBar()
+    {
+        yield return new WaitForSeconds(0.1f);
+        speedOfBar += speedOfBar;
     }
 
     // Update is called once per frame
@@ -25,21 +40,12 @@ public class BarMovement : MonoBehaviour
             //startTime = Time.time;
             StartCoroutine(getRidOfStuff());
             started = true;
-            highestPos = backBar.anchoredPosition.y + backBar.rect.height / 1.5f;
-            lowestPos = backBar.anchoredPosition.y - backBar.rect.height / 1.5f;
-            to = new Vector2(backBar.anchoredPosition.x, lowestPos);
-            from = new Vector2(backBar.anchoredPosition.x, highestPos);
-            deltaLerp = 0;
+            deltaLerp = 0.5f;
             dir = 1;
         }
-        if (started)
+        else if (started)
         {
-            highestPos = backBar.anchoredPosition.y + backBar.rect.height / 1.5f;
-            lowestPos = backBar.anchoredPosition.y - backBar.rect.height / 1.5f;
-            to = new Vector2(backBar.anchoredPosition.x, lowestPos);
-            from = new Vector2(backBar.anchoredPosition.x, highestPos);
-
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetButtonDown("Jump"))
             {
                 dir *= -1;
             }
@@ -51,7 +57,7 @@ public class BarMovement : MonoBehaviour
             {
                 dir = 1;
             }
-            deltaLerp += Time.deltaTime * dir;
+            deltaLerp += speedOfBar * Time.deltaTime * dir;
             trans.anchoredPosition = Vector2.Lerp(from, to, deltaLerp);
 
             if ((trans.anchoredPosition.y >= (goalBar.anchoredPosition.y + goalBar.rect.height / 2.5f)) ||

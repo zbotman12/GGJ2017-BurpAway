@@ -7,19 +7,24 @@ public class SodameterGauge : MonoBehaviour
 {
     public UnityEngine.UI.Image sodameter;
     public float fillAmt;
+    public PlayerLaunch pLaunch;
+    public float fillValue;
 
     // Use this for initialization
     void Start ()
     {
+        pLaunch = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLaunch>();
         fillAmt = 0.0f;
-        sodameter.fillAmount = 0.2f;
+        fillValue = 0.05f;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        sodameter.fillAmount += fillAmt;
-	}
+        fillValue += fillAmt;
+        pLaunch.power = fillValue;
+        sodameter.fillAmount = fillValue;
+    }
 
     public void fill()
     {

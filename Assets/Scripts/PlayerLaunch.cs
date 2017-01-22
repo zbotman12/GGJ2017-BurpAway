@@ -13,8 +13,8 @@ public class PlayerLaunch : MonoBehaviour {
     public int JumpInfoX;
     public int JumpInfoY;
     public float hangTime;
-    public UnityEngine.UI.Image sodameter;
-    float power;
+    public SodameterGauge sodameter;
+    public float power;
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -26,7 +26,7 @@ public class PlayerLaunch : MonoBehaviour {
 
         if (jumped && rb.velocity.y <= 0)
         {
-            rb.gravityScale = 0.01f;
+            rb.gravityScale = 0.0f;
         }
 
         if(fall)
@@ -37,10 +37,10 @@ public class PlayerLaunch : MonoBehaviour {
 
     public void Launch(float power)
     {
-        power = sodameter.fillAmount;
         rb.AddForce(new Vector2(power * JumpInfoX, power * JumpInfoY));
         rb.AddTorque(turnAmmount);
-        StartCoroutine(JumpTime());
+        jumped = true;
+        StartCoroutine(Hang());
     }
 
     void OnTriggerEnter2D(Collider2D coll)
@@ -51,23 +51,10 @@ public class PlayerLaunch : MonoBehaviour {
         }
     }
 
-    IEnumerator JumpTime()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(0.1f);
-            jumped = true;
-            StartCoroutine(Hang());
-        }
-    }
-
     IEnumerator Hang()
     {
-        while (true)
-        {
             yield return new WaitForSeconds(power * hangTime);
             fall = true;
             jumped = false;
-        }
     }
 }
