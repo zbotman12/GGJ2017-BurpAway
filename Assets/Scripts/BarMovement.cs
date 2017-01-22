@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BarMovement : MonoBehaviour
 {
-    public float lowestPos, highestPos, speed, deltaLerp, dir;
+    public float lowestPos, highestPos, speed, deltaLerp, dir, startTime;
     Vector2 to, from;
     RectTransform trans;
     public RectTransform goalBar, backBar;
+    public SodameterGauge sodameter;
 	// Use this for initialization
 	void Awake ()
     {
@@ -18,6 +19,7 @@ public class BarMovement : MonoBehaviour
         from = new Vector2(backBar.anchoredPosition.x, highestPos);
         deltaLerp = 0;
         dir = 1;
+        startTime = Time.time;
     }
 
     // Update is called once per frame
@@ -44,5 +46,21 @@ public class BarMovement : MonoBehaviour
         }
         deltaLerp += Time.deltaTime * dir;
         trans.anchoredPosition = Vector2.Lerp(from, to, deltaLerp);
+
+        if((trans.anchoredPosition.y >= (goalBar.anchoredPosition.y + goalBar.rect.height / 2.5f)) ||
+           (trans.anchoredPosition.y <= (goalBar.anchoredPosition.y - goalBar.rect.height / 2.5f)))
+        {
+            sodameter.stopFill();
+        }
+        else
+        {
+            sodameter.fill();
+        }
+
+        if(Time.time - startTime > 6.0f)
+        {
+            sodameter.stopFill();
+            Destroy(GameObject.FindGameObjectWithTag("MainMechanicBar"));
+        }
     }
 }
