@@ -43,13 +43,19 @@ public class PlayerLaunch : MonoBehaviour {
         StartCoroutine(Hang());
     }
 
+    //death at water bottom
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if(coll.tag == "deathzone")
+        if(coll.tag == "deathzone") //loose at water
         {
             Debug.Log("changeScene~!!!!");
         }
+        if(coll.tag == "winzone") //win at flag
+        {
+            Debug.Log("Victory");
+        }
     }
+
 
     IEnumerator Hang()
     {
