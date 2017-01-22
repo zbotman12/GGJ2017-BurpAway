@@ -13,9 +13,10 @@ public class scp_makewaves : MonoBehaviour {
     private int i = 0;
     public float xspacing;
     public float yspacing;
+    public int wave_amount; //how many waves
     void Start () {
         {
-            for (i = 0; i <1000; i++) //make waves
+            for (i = 0; i <wave_amount; i++) //make waves
             {
                 Instantiate(wave_right1, new Vector3((i * xspacing), 0.4f, 0), Quaternion.identity, transform);
                 Instantiate(wave_left1, new Vector3((i * xspacing), -2.5f, 0), Quaternion.identity, transform);

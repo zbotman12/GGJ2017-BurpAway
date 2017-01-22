@@ -37,19 +37,29 @@ public class PlayerLaunch : MonoBehaviour {
 
     public void Launch(float power)
     {
+        if (power > 1)
+        {
+            power = 1.0f;
+        }
         rb.AddForce(new Vector2(power * JumpInfoX, power * JumpInfoY));
         rb.AddTorque(turnAmmount);
         jumped = true;
         StartCoroutine(Hang());
     }
 
+    //death at water bottom
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if(coll.tag == "deathzone")
+        if(coll.tag == "deathzone") //loose at water
         {
             Debug.Log("changeScene~!!!!");
         }
+        if(coll.tag == "winzone") //win at flag
+        {
+            Debug.Log("Victory");
+        }
     }
+
 
     IEnumerator Hang()
     {
