@@ -52,11 +52,11 @@ public class PlayerLaunch : MonoBehaviour {
     {
         if(coll.tag == "deathzone") //loose at water
         {
-            Debug.Log("changeScene~!!!!");
+            SceneManager.LoadScene(2);
         }
         if(coll.tag == "winzone") //win at flag
         {
-            Debug.Log("Victory");
+            SceneManager.LoadScene(3);
         }
     }
 
