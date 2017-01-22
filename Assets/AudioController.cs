@@ -15,6 +15,13 @@ public class AudioController : MonoBehaviour {
     public AudioClip Epic2;
     public AudioClip Ambient;
     public AudioClip Ocean;
+    public AudioClip burp1;
+    public AudioClip burp2;
+    public AudioClip burp3;
+    public AudioClip burp4;
+    public AudioClip burpStrong;
+    public AudioClip burpWeak1;
+    public AudioClip burpWeak2;
     public float MusicVolume = 1.0f;
     AudioClip[] tracks;
     bool started = false;
@@ -23,15 +30,22 @@ public class AudioController : MonoBehaviour {
     void Start()
     {
         pLaunch = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLaunch>();
-        tracks = new AudioClip[10];
+        tracks = new AudioClip[15];
         tracks[0] = PreLaunch;
         tracks[1] = Launch;
         tracks[2] = Epic1;
         tracks[3] = Epic2;
         tracks[4] = Ambient;
         tracks[5] = Ocean;
+        tracks[6] = burp1;
+        tracks[7] = burp2;
+        tracks[8] = burp3;
+        tracks[9] = burp4;
+        tracks[10] = burpStrong;
+        tracks[11] = burpWeak1;
+        tracks[12] = burpWeak2;
 
-        ASa = gameObject.AddComponent<AudioSource>();
+    ASa = gameObject.AddComponent<AudioSource>();
         ASb = gameObject.AddComponent<AudioSource>();
         ASc = gameObject.AddComponent<AudioSource>();
         ASd = gameObject.AddComponent<AudioSource>();
@@ -86,7 +100,11 @@ public class AudioController : MonoBehaviour {
         yield return new WaitForSeconds(6.0f);
         StartCoroutine(switchTrack(1));
         animator.SetTrigger("Launch");
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.50f);
+        ASd.clip = tracks[Random.Range(6, 12)];
+        ASd.volume = 1;
+        ASd.Play();
+        yield return new WaitForSeconds(0.50f);
         pLaunch.SendMessage("Launch", 1.0f);
         animator.SetTrigger("Fly");
         Camera.main.GetComponent<ParallaxController>().SendMessage("StartLerp");
