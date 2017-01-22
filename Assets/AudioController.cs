@@ -16,6 +16,7 @@ public class AudioController : MonoBehaviour {
     public AudioClip Ocean;
     public float MusicVolume = 1.0f;
     AudioClip[] tracks;
+    bool started = false;
     PlayerLaunch pLaunch;
 
     void Start()
@@ -50,10 +51,11 @@ public class AudioController : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !started)
         {
             StartCoroutine(switchTrack(0));
             StartCoroutine(BlastOff());
+            started = true;
         }
 
 
@@ -83,6 +85,7 @@ public class AudioController : MonoBehaviour {
         StartCoroutine(switchTrack(1));
         yield return new WaitForSeconds(2.0f);
         pLaunch.SendMessage("Launch", 1.0f);
+        Camera.main.GetComponent<ParallaxController>().SendMessage("StartLerp");
         StartCoroutine(switchTrack(2));
         yield return new WaitForSeconds(12.0f);
         StartCoroutine(switchTrack(3));

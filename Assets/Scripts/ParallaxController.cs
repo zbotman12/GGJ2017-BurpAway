@@ -17,6 +17,7 @@ public class ParallaxController : MonoBehaviour {
     private Vector3 m_LastTargetPosition;
     private Vector3 m_CurrentVelocity;
     private Vector3 m_LookAheadPos;
+    bool startLerp = false;
 
     // Use this for initialization
     private void Start()
@@ -54,5 +55,20 @@ public class ParallaxController : MonoBehaviour {
         transform.position = newPos + new Vector3(offsetX, offsetY, 0);
 
         m_LastTargetPosition = target.position;
+
+        if(startLerp)
+        {
+            offsetX = Mathf.Lerp(offsetX, 0, 0.1f);
+            offsetY = Mathf.Lerp(offsetY, 0, 0.1f);
+            if(Mathf.Round(offsetX) == 0 && Mathf.Round(offsetY) == 0)
+            {
+                startLerp = false;
+            }
+        }
+    }
+
+    void StartLerp()
+    {
+        startLerp = true;
     }
 }

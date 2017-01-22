@@ -26,7 +26,7 @@ public class PlayerLaunch : MonoBehaviour {
 
         if (jumped && rb.velocity.y <= 0)
         {
-            rb.gravityScale = 0.3f;
+            rb.gravityScale = 0.01f;
         }
 
         if(fall)
