@@ -22,7 +22,7 @@ public class scp_makewaves : MonoBehaviour {
                 Instantiate(wave_right2, new Vector3((i * xspacing), -5.5f, 0), Quaternion.identity, transform);
                 Instantiate(wave_left2, new Vector3((i * xspacing), -8.5f, 0), Quaternion.identity, transform);
                 Instantiate(wave_right3, new Vector3((i * xspacing), -11.5f, 0), Quaternion.identity, transform);
-                Instantiate(collisionBox, new Vector3((i * xspacing), -5.5f, 0), Quaternion.identity, transform);
+                Instantiate(collisionBox, new Vector3((i * xspacing), -12.0f, 0), Quaternion.identity, transform);
 
 
 

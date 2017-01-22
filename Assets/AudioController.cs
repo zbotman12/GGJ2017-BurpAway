@@ -85,8 +85,10 @@ public class AudioController : MonoBehaviour {
     {
         yield return new WaitForSeconds(6.0f);
         StartCoroutine(switchTrack(1));
+        animator.SetTrigger("Launch");
         yield return new WaitForSeconds(2.0f);
         pLaunch.SendMessage("Launch", 1.0f);
+        animator.SetTrigger("Fly");
         Camera.main.GetComponent<ParallaxController>().SendMessage("StartLerp");
         StartCoroutine(switchTrack(2));
         yield return new WaitForSeconds(12.0f);
