@@ -37,6 +37,10 @@ public class PlayerLaunch : MonoBehaviour {
 
     public void Launch(float power)
     {
+        if (power > 1)
+        {
+            power = 1.0f;
+        }
         rb.AddForce(new Vector2(power * JumpInfoX, power * JumpInfoY));
         rb.AddTorque(turnAmmount);
         jumped = true;

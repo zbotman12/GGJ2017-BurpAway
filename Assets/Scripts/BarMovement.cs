@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BarMovement : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class BarMovement : MonoBehaviour
     public int AmountOfPresses;
     int presses = 0;
     RectTransform trans;
-    Image DangerText;
+    public Image DangerText;
+    public Image SpaceText;
     public RectTransform goalBar, backBar;
     public SodameterGauge sodameter;
     // Use this for initialization
@@ -53,13 +55,16 @@ public class BarMovement : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 presses++;
-                if(presses >= AmountOfPresses - 5)
+                if(presses >= (AmountOfPresses - 5))
                 {
                     DangerText.enabled = true;
+                    SpaceText.enabled = false;
                 }
-                else if(presses >= AmountOfPresses)
+                if(presses >= AmountOfPresses)
                 {
                     animator.SetTrigger("Explode");
+                    SceneManager.LoadScene(2);
+
                 }
                 dir *= -1;
             }
